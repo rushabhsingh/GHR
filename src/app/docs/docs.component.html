@@ -1,0 +1,26 @@
+<div class="card" style="background-color:#C50000;">
+  <div class="card-header"  style="text-align:center; background-color:#C50000; color:#FFFDEF;">Remedies</div>
+  <div class="card-block" style="background:#FFFDEF;">
+
+
+          <form [formGroup]="form" (ngSubmit)="getRemedies(form.value)">
+            <div class="input-group stylish-input-group">
+                      <input type="text" class="form-control"  id="tags"placeholder="Search" name="search" formControlName="search" style="width: 100%;">
+                        <span class="input-group-addon">
+                            <button type="submit" style="color:rgb(247, 241, 241);">
+                                <span class="fa fa-search"></span>
+                            </button>
+						</span>
+                </div>
+          </form>  
+         
+                    
+      
+      <div *ngIf="remedyshow">
+        <br/>
+          <p><b>Name</b>:&nbsp;&nbsp;{{remedyname}}</p>  
+          <p><b>First-Aid</b>:<br>{{remedies}}</p> 
+      </div>
+    
+</div>
+</div>

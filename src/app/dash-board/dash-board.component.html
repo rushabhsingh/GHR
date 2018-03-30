@@ -1,0 +1,57 @@
+<!--
+<div class="container">
+	<button (click)="ChatRoom()" class="btn btn-primary">Chat Room</button>
+	<button (click)="Ambulance()" class="btn btn-primary">View ambulance requests</button>
+</div>
+
+-->
+
+
+<div class="container">
+  <div class="row container" style="margin:0px;margin-bottom:1%;padding-left:0px;padding-right:0px;">
+    <button type="button" class="btn btn-danger" style="width:100%;">Emergency<i class="fa fa-bell-o" aria-hidden="true"></i></button>
+  </div>
+    <div class="card" style="background-color:#C50000;">
+            <div class="card-block" style="background:#FFFDEF;">
+                <div class="row justify-content-center">
+                    <div class="col" style="width:75px; margin:3px; padding:3px; border-right:solid; border-right-width:thin; border-right-color:red;">
+                       <a routerLink="/notify" class="links"><img src="assets/notification.png" style="width:100%; height:auto;" class="mx-auto">
+                       <p class="texts" style="text-align:center;font-weight:600;">Notify</p></a>
+                      
+                        </div>
+                    <div class="col" style="width:75px; margin:3px; padding:3px; ">
+					<a routerLink="/blood" class="links">   <img src="assets/call.png" style="width:100%; height:auto;" class="mx-auto">                      
+                          <p class="texts" style="text-align:center;font-weight:600;">Text-SMS</p></a>
+                      
+					  </div>
+				</div>
+				<div class="row justify-content-center">
+                    <div class="col" style="width:75px; margin:3px; padding:3px; border-right:solid; border-right-width:thin; border-right-color:red;">
+                       <a routerLink="/chatRooms" class="links"><img src="assets/chat.png" style="width:100%; height:auto;" class="mx-auto">
+                       <p class="texts" style="text-align:center;font-weight:600;">Chat Room</p></a>
+                      
+                        </div>
+                    <div class="col" style="width:75px; margin:3px; padding:3px; ">
+					<a routerLink="/docs" class="links">   <img src="assets/docs.png" style="width:100%; height:auto;" class="mx-auto">                      
+                          <p class="texts" style="text-align:center;font-weight:600;">Docs</p></a>
+                      
+					  </div>
+				</div>
+				<div class="row justify-content-center">
+                    <div class="col" style="width:75px; margin:3px; padding:3px; border-right:solid; border-right-width:thin; border-right-color:red;">
+                       <a routerLink="/nearby" class="links"><img src="assets/nearby.png" style="width:100%; height:auto;" class="mx-auto">
+                       <p class="texts" style="text-align:center;font-weight:600;">NearBy</p></a>
+                      
+                        </div>
+                    <div class="col" style="width:75px; margin:3px; padding:3px; ">
+					<a routerLink="/blood" class="links">   <img src="assets/docs.png" style="width:100%; height:auto;" class="mx-auto">                      
+                          <p class="texts" style="text-align:center;font-weight:600;">My Reports</p></a>
+                      
+					  </div>
+				</div>
+				
+			</div>	
+       </div>
+
+       
+</div>

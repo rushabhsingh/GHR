@@ -1,0 +1,18 @@
+.links
+{
+    text-decoration: none;
+    color:#E70000;
+}
+
+img {
+	width:80% !important;
+	height:76% !important;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+}
+
+.texts{
+	
+	margin-top:10px;
+}

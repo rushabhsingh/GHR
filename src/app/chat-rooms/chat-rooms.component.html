@@ -1,0 +1,35 @@
+
+<!--
+<div *ngIf="chatRooms?.length > 0;else noItems">
+	<ul *ngFor="let chatRoom of chatRooms ">
+		<li (click)="openChatRoom(chatRoom.number)" >{{chatRoom.number}}</li>
+	</ul>
+</div>
+
+<ng-template #noItems>
+	<p> Currently there are no items! </p>
+</ng-template>
+
+<button class="btn btn-primary" (click)="createRoom()" >Create a Chat Room</button>
+
+-->
+
+
+<div class="card" style="background-color:#C50000;">
+    <div class="card-header"  style="text-align:center; background-color:#C50000; color:#FFFDEF;">Ambulance Requests</div>
+    <div class="card-block" style="background:#FFFDEF;">
+            
+	<div *ngIf="chatRooms?.length > 0;else noItems">
+		<ul style="padding-left:0px" *ngFor="let chatRoom of chatRooms ">
+			<li class="alert alert-warning" (click)="openChatRoom(chatRoom.number)" >{{chatRoom.number}}</li>
+		</ul>
+	</div>
+	
+	<ng-template #noItems>
+		<p class="alert alert-warning"> Currently there are no items! </p>
+	</ng-template>
+
+	<button class="btn btn-danger" (click)="createRoom()" >Create a Chat Room</button>
+
+      </div>
+  </div>

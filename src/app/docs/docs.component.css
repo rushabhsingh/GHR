@@ -1,0 +1,13 @@
+
+.stylish-input-group .input-group-addon{
+    background: rgb(236, 14, 14) !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:rgb(238, 24, 24);
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}

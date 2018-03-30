@@ -1,0 +1,27 @@
+<!-- <button (click)="sendNotification()">send Notification</button>
+<br>
+<br>
+<br>
+<input type="text" [value]="username" (input)="username = $event.target.value"><br><br>
+<input type="text" [value]="message" (input)="message = $event.target.value"><br><br>
+<button (click)="send()">Send</button>
+<br>
+<br>
+<br>
+
+-->
+<div *ngIf="messages?.length > 0;else noItems">
+	<ul *ngFor="let message of messages" style="padding:5px 10px;">
+		<li (click)="profile(message.username)" style="color:red;font-size:15px;">{{message.username}}</li>
+		<li>{{message.message}}</li>
+	</ul>
+</div>
+
+<ng-template #noItems>
+	<p> Currently there are no items! </p>
+</ng-template>
+
+<div style="display:flex;position:fixed;bottom:0px;left:0px;right:0px;">
+<input style="flex:10" type="text" [value]="newMessage" (input)="newMessage = $event.target.value">
+<button style="flex:1;border-radius:0px" class="btn btn-danger" (click)="send()"><i class="fa fa-paper-plane"></i></button>
+</div>

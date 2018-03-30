@@ -1,0 +1,31 @@
+
+<agm-map (mapClick)="placeMarker($event)" [mapTypeId]="maptype" [zoom]="12" [latitude]="victimLatitude" [longitude]="victimLongitude" >
+  <agm-marker [label]="youLabel" [latitude]="currentLatitude" [longitude]="currentLongitude" >
+	</agm-marker>
+   <agm-marker [label]="victimLabel" [latitude]="victimLatitude" [longitude]="victimLongitude" >
+	</agm-marker>
+</agm-map>
+
+
+<div class="alert alert-warning" style="margin-top:10px">
+<h6>Click anywhere to find the distance</h6>
+<h5 class="distance" ></h5>
+</div>
+
+<div class="card" style="background-color:#C50000;">
+    <div class="card-header"  style="text-align:center; background-color:#C50000; color:#FFFDEF;">Victim's Messages </div>
+    <div class="card-block" style="background:#FFFDEF;">
+		 
+		<div *ngIf="messages?.length > 0;else noItems">
+			<ul class="alert alert-warning" style="padding:5px 10px;" *ngFor="let message of messages">
+				<li (click)="profile(message.username)">{{message.username}}</li>
+				<li>{{message.message}}</li>
+			</ul>
+		</div>
+		<ng-template #noItems>
+			<p class="alert alert-warning">Currently there are no Items</p>
+		</ng-template>
+  
+      </div>
+  </div>
+ 

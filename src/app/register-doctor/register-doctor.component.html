@@ -1,0 +1,44 @@
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+	
+	<div *ngIf = "verify">
+	  <form [formGroup]="Form" (ngSubmit)="submitOtp(Form.value)">
+		<div class="form-container">
+		  <div class="row columns">
+			<h1>OTP Verification</h1>
+			<label>OTP
+			  <input type="text" formControlName="otp">
+			</label>
+			<div class="alert" *ngIf="!Form.controls['otp'].valid && Form.controls['otp'].touched">{{ titleAlert }}</div>
+			
+			<input type="submit" class="button expanded" value="Verify Otp" [disabled]="!Form.valid">
+		  </div>
+		</div>
+	  </form>
+	</div>
+
+	<div *ngIf = "!verify">
+		<form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+		<div class="form-container">
+		  <div class="row columns">
+			<h1>Registration</h1>
+			<label>Name
+			  <input type="text" formControlName="text">
+			</label>
+			<div class="alert" *ngIf="!rForm.controls['text'].valid && rForm.controls['text'].touched">{{ titleAlert }}</div>
+			
+			<label>Phone Number 
+			  <input type="number" maxlength="10" formControlName="number">
+			</label>
+			<div class="alert" *ngIf="!rForm.controls['number'].valid && rForm.controls['number'].touched">{{ titleAlert }}</div>
+			
+			<label>pass
+			  <input type="text"  formControlName="pass">
+			</label>
+			<div class="alert" *ngIf="!rForm.controls['pass'].valid && rForm.controls['pass'].touched">You must specify a description that's between 30 and 500 characters.</div>
+			
+			<input type="submit" class="button expanded" value="Register" [disabled]="!rForm.valid">
+		  </div>
+		</div>
+	  </form>
+	</div>

@@ -1,0 +1,41 @@
+
+<h4 *ngIf="owner">Click accept to help the victim</h4>
+
+<agm-map (mapClick)="placeMarker($event)" [mapTypeId]="maptype" [zoom]="12" [latitude]="victimLatitude" [longitude]="victimLongitude" >
+  <agm-marker  [label]="location.accept ? acceptLabel : (location.victim ? victimLabel : (location.reject ? rejectLabel : ''))"  *ngFor="let location of locations" [latitude]="location.latitude" [longitude]="location.longitude" >
+	</agm-marker>
+   <agm-marker  [label]="youLabel" [latitude]="currentLatitude" [longitude]="currentLongitude" >
+	</agm-marker>
+</agm-map>
+
+<div class="alert alert-warning" style="margin-top:10px">
+<h6>Click anywhere to find the distance</h6>
+<h5 class="distance" ></h5>
+</div>
+<div *ngIf="owner" style="text-align:center;margin-top:10px">
+	<button (click)="reply(true)" class="btn btn-danger">Accept</button>
+	<button (click)="reply(false)" class="btn btn-danger">Reject </button>
+</div>
+
+<div class="card" style="margin-top:10px;background-color:#C50000;">
+    <div class="card-header"  style="text-align:center; background-color:#C50000; color:#FFFDEF;">Victim Details</div>
+    <div class="card-block" style="background:#FFFDEF;">		<div *ngIf="victim" class="container">
+	<h5>User Type: {{victim.userType}}</h5>
+	<h5>Phone number: {{victim.number}}</h5>
+	<a style="text-decoration:none;color:black" (click)="profile(victim.number)">For more details, checkout the profile of the victim by clicking here.</a>
+</div>
+<br>
+<br>
+
+      </div>
+  </div>
+  
+
+<!--
+<div *ngIf="locations?.length > 0;else noItems">
+	<ul *ngFor="let location of locations">
+		<li>{{location.latitude}}</li>
+		<li>{{location.longitude}}</li>
+	</ul>
+</div>
+-->

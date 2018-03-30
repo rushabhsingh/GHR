@@ -1,0 +1,35 @@
+<!--
+<div class="container">
+	<div *ngIf="requestsReal?.length > 0;else noItems">
+		<ul *ngFor="let rr of requestsReal ">
+			<li (click)="openChatRoom(rr.number)" >{{rr.number}}</li>
+		</ul>
+	</div>
+
+	<ng-template #noItems>
+		<p> Currently there are no items! </p>
+	</ng-template>
+
+	<button (click)="sendNotification()">Send Notifications to ambulance</button>
+</div>
+
+-->
+
+<div class="card" style="background-color:#C50000;">
+    <div class="card-header"  style="text-align:center; background-color:#C50000; color:#FFFDEF;">Ambulance Requests</div>
+    <div class="card-block" style="background:#FFFDEF;">
+            
+		 <div *ngIf="requestsReal?.length > 0;else noItems">
+		<ul style="padding-left:0px" *ngFor="let rr of requestsReal ">
+			<li class="alert alert-warning" (click)="openChatRoom(rr.number)" >{{rr.number}}</li>
+		</ul>
+	</div>
+
+	<ng-template #noItems>
+		<p class="alert alert-warning"> Currently there are no items! </p>
+	</ng-template>
+
+	<button class="btn btn-danger" (click)="sendNotification()">Send Notifications to ambulance</button>
+
+      </div>
+  </div>
